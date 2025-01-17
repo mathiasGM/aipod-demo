@@ -1,4 +1,10 @@
 import streamlit as st
+import sys
+import os
+
+# Add the parent directory to Python path to find the aipod module
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from aipod.transcriber import PodcastTranscriber
 from aipod.analyzer import PodcastAnalyzer
 from aipod.rag import PodcastRAG
