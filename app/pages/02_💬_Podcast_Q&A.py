@@ -1,11 +1,6 @@
-import sys
-import os
 import streamlit as st
 from utils import check_states
 
-#sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))) # Hack for streamlit cloud
-
-from aipod.transcriber import PodcastTranscriber
 from aipod.rag import PodcastRAG
 
 rag = PodcastRAG(st.secrets["OPENAI_API_KEY"])
