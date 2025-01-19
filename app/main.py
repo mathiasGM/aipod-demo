@@ -1,5 +1,8 @@
+import sys
+import os
 import streamlit as st
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))) # Hack for streamlit cloud
 from aipod.transcriber import PodcastTranscriber
 
 transcriber = PodcastTranscriber(st.secrets["GEMINI_API_KEY"])
