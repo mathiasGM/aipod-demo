@@ -14,7 +14,7 @@ if podcast_file:
     st.session_state.uploaded_file = podcast_file
 
     with st.spinner("🎧 Processing podcast"):
-        transcript = transcriber.transcribe(podcast_file.getvalue())
+        transcript = transcriber.transcribe(podcast_file)
         st.session_state.transcript = transcript
         st.success("Podcast processed successfully") 
 

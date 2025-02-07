@@ -172,3 +172,9 @@ cython_debug/
 
 # Streamlit secrets
 .streamlit/secrets.toml
+
+# Local files
+*.mp3
+*.mp4
+*.m4a
+*.wav
