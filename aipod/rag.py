@@ -2,14 +2,14 @@ from llama_index.llms.openai import OpenAI
 from llama_index.core import Document
 from llama_index.core import VectorStoreIndex
 from llama_index.core import Settings
-
+import streamlit as st
 
 class PodcastRAG:
     def __init__(self, openai_api_key: str):
         """Initialize the RAG system."""
         self.index = None
         self.query_engine = None
-        Settings.llm = OpenAI(temperature=0.3, model="gpt-4o-mini",api_key=openai_api_key)
+        Settings.llm = OpenAI(temperature=0.3, model="gpt-4o-mini",api_key=st.secrets["OPENAI_API_KEY"])
 
     def create_index(self, transcripts: list[str]):
         """Create a vector index from a list of podcast transcripts."""

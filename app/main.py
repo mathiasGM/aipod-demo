@@ -20,12 +20,3 @@ if podcast_file:
 
 st.text("")
 st.text("")
-st.markdown(
-    """
-    ##### 💡 Some ideas for future development
-    - Short audio clips in summary
-    - Let RAG responds with audio clips
-    - Generate AI podcast on top - let hosts discuss the podcast
-    - Episode2Webpage
-    - Webpage2Podcast
-    """)
